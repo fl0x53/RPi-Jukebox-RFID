@@ -33,7 +33,7 @@ function loadStatusRepeat() {
             if (++counter == 5) {
                 clearInterval(interval);
             }
-        },1000)
+        },1000);
         JUKEBOX.interval = interval;
         JUKEBOX.timeout = setTimeout(loadStatusRepeat, 5000);
     });
@@ -284,13 +284,13 @@ function onChangeChapter() {
 
 function volumeUp() {
     executePlayerCommand('volumeup', () => {
-        loadVolume()
+        loadVolume();
     });
 }
 
 function volumeDown() {
     executePlayerCommand('volumedown', () => {
-        loadVolume()
+        loadVolume();
     });
 }
 
@@ -309,17 +309,17 @@ function stop() {
 }
 
 function toggleShuffle(element) {
-    togglePlaylistCommand(element, 'shuffle')
+    togglePlaylistCommand(element, 'shuffle');
 }
 
 function toggleResume(element) {
     console.log("toggle resume");
     console.log(element);
-    togglePlaylistCommand(element, 'resume')
+    togglePlaylistCommand(element, 'resume');
 }
 
 function toggleSingle(element) {
-    togglePlaylistCommand(element, 'single')
+    togglePlaylistCommand(element, 'single');
 }
 
 function togglePlaylistCommand(element, toggleAttributeName) {
@@ -397,7 +397,7 @@ function formatTimeHours(timeInSeconds) {
 }
 
 function formatWithDigits(number, digits) {
-    return (number).toLocaleString('en-US', {minimumIntegerDigits: digits, useGrouping:false})
+    return (number).toLocaleString('en-US', {minimumIntegerDigits: digits, useGrouping:false});
 }
 
 init();
